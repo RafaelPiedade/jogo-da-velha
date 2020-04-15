@@ -1,11 +1,14 @@
-import React from 'react';
-import './App.css';
+import React from "react";
+import "./settings/colors.css";
+import "./App.css";
+import "./generic/reset.css";
+import "./elements/index.css";
 
 function App() {
   return (
-    <div className="App">
-      <h2 className="sobre">Sobre</h2>
-    </div>
+    <a href="!#" className="action">
+      Sobre
+    </a>
   );
 }
 

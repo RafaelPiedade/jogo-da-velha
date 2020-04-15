@@ -1,12 +1,7 @@
-.App {
-  text-align: center;
-  background-color: #eee;
-}
-
-.sobre {
-  font-family: "Montserrat", sans-serif;
+.action {
   font-weight: bold;
-  text-transform: uppercase;
   font-size: 14px;
-  color: #707070;
+  color: var(--color-first);
+  text-decoration: none;
+  text-transform: uppercase;
 }
