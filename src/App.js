@@ -1,13 +1,11 @@
 import React from "react";
 
-import Sobre from "./objects/Sobre";
-import LogoCollabCode from './objects/LogoCollabcode'
+import Header from "./component/Header";
 
 function App() {
   return (
     <>
-      <LogoCollabCode/>
-      <Sobre />
+      <Header />
     </>
   );
 }

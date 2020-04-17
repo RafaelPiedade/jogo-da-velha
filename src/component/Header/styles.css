@@ -1,0 +1,20 @@
+.header {
+  box-sizing: border-box;
+  display: inline-block;
+  padding: 19px 35px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.header > .logoCollabcode {
+  float: left;
+}
+
+.header > .sobre {
+  float: right;
+  margin-right: 10px;
+}
+
+.header > .menu {
+  float: right;
+}
