@@ -1,0 +1,14 @@
+.boardGame {
+  box-sizing: border-box;
+  width: 290px;
+  height: 290px;
+  background-color: var(--color-third);
+  margin: auto;
+  margin-top: 85px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 4px;
+  border: 10px solid var(--color-zero);
+}
