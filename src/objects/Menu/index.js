@@ -3,9 +3,11 @@ import "./styles.css";
 
 const Menu = () => {
   return (
-    <div className="menu">
-      <span className="hamburguer"></span>
-    </div>
+    <>
+      <a href="#menu" className="menu">
+        <span className="center">Menu</span>
+      </a>
+    </>
   );
 };
 

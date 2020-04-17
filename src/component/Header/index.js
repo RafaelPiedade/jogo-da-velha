@@ -1,18 +1,19 @@
 import React from "react";
 
 import Sobre from "../../objects/Sobre";
-import LogoCollabCode from "../../objects/LogoCollabcode";
+import Logo from "../../objects/Logo";
 import Menu from "../../objects/Menu";
 
 import './styles.css'
 const Header = () => {
   return (
     <header className="header">
-      <LogoCollabCode />
-      <Menu />
+      <Logo />
       <Sobre />
+      <Menu />
     </header>
   );
 };
 
 export default Header;
+/* 13:23 */

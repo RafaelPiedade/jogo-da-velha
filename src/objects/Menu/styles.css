@@ -1,35 +1,19 @@
 .menu {
-  position: relative;
-  display: inline-block;
-  width: 25px;
-  height: 18px;
-  background-color: var(--color-second);
-  cursor: pointer;
-}
-
-.menu > .hamburguer {
-  position: absolute;
-  background-color: var(--color-fouth);
-  top: 50%;
-  transform: translateY(-50%);
-  width: 100%;
-  height: 4px;
-  border-radius: 25px;
-}
-
-.menu > .hamburguer::before,
-.menu > .hamburguer::after {
-  position: absolute;
-  content: "";
   display: block;
-  background-color: var(--color-fouth);
+  text-indent: -9999px;
+}
+
+.menu::after,
+.menu::before,
+.menu > .center {
+  content: "";
+  height: 4px;
   width: 100%;
-  height: 100%;
-  border-radius: 25px;
+  background-color: var(--color-fouth);
+  display: block;
+  border-radius: 2px;
 }
-.menu > .hamburguer::before {
-  top: -7px;
-}
-.menu > .hamburguer::after {
-  bottom: -7px;
+.menu::before,
+.menu > .center {
+  margin-bottom: 5px;
 }
