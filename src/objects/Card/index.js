@@ -1,16 +1,13 @@
 import React from "react";
 
-//import circle from "../../img/circle.png";
-import x from "../../img/x.png";
+import "./styles.css";
 
-import './styles.css'
-
-const Card = () => {
+const Card = ({children}) => {
   return (
-    <div className="card">
-      <img className="icon"src={x} alt="" />
-    </div>
+    <article className="card">
+      {children}
+    </article>
   );
 };
 
-export default Card
+export default Card;

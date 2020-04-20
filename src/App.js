@@ -1,15 +1,13 @@
 import React from "react";
-
+import "./App.css";
 import Header from "./component/Header";
-import BoardGame from "./objects/BoardGame";
+import Hashtag from "./component/Hashtag";
 
-function App() {
-  return (
-    <>
-      <Header />
-      <BoardGame />
-    </>
-  );
-}
+const App = () => (
+  <main className="app">
+    <Header />
+    <Hashtag />
+  </main>
+);
 
 export default App;
