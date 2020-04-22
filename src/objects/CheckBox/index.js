@@ -1,13 +1,13 @@
 import React from "react";
 import "./styles.css";
-import LabelCollab from "../LabelCollab";
 
-const CheckBox = () => (
+import Input from "../Input";
+import Label from "../Label";
+
+const CheckBox = ({ id = "", value = "", content = "" }) => (
   <>
-    <LabelCollab content="Mostrar eventos" htmlFor="checkBox">
-      <input type="checkBox" id="checkBox" />
-      <div className="check"></div>
-    </LabelCollab>
+    <Input id={id} value={value} type="checkbox" />
+    <Label htmlFor={id} content={content} />
   </>
 );
 

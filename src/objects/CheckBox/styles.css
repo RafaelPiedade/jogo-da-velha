@@ -1,19 +1,23 @@
-#checkBox {
+.input{
   display: none;
 }
 
-#checkBox:checked + .check {
-  background-color: var(--color-fourth);
+.label{
+  display: inline-flex;
+  align-items: center;
 }
-
-.check {
-  vertical-align: bottom;
-  display: inline-block;
+.label::before {
+  content: "";
   box-sizing: border-box;
+  display: inline-block;
+  border: 3px solid var(--color-fourth);
   width: 20px;
   height: 20px;
-  border: 3px solid var(--color-fourth);
   border-radius: var(--spacing-radius);
-  margin-right: 6px;
   cursor: pointer;
+  margin-right: 5px;
+}
+
+.input:checked + .label::before {
+  background-color: var(--color-first);
 }
