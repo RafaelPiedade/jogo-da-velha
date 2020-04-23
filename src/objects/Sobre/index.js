@@ -1,11 +1,13 @@
 import React from "react";
-import './styles.css'
+import "./styles.css";
 
-const Sobre = () => {
+const Sobre = ({togleAbout}) => {
   return (
-    <a href="!to-do" className="sobre">
-      Sobre
-    </a>
+    <>
+      <a href="!#" className="sobre" onClick={togleAbout}>
+        Sobre
+      </a>
+    </>
   );
 };
 

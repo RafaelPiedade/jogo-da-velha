@@ -3,6 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 0;
+  color: var(--color-fourth)
 }
 
 .header > .sobre{
