@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles.css";
 
-import Sobre from "../../objects/Sobre";
+import AboutLink from "../../objects/AboutLink";
 import Logo from "../../objects/Logo";
 import Menu from "../../objects/Menu";
 
@@ -10,7 +10,7 @@ const Header = ({ logo, togleAbout }) => {
     <>
       <header className="header">
         <Logo logo={logo} />
-        <Sobre togleAbout={togleAbout}/>
+        <AboutLink togleAbout={togleAbout}/>
         <Menu/>
       </header>
     </>

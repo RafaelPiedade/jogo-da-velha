@@ -6,7 +6,7 @@
   color: var(--color-fourth)
 }
 
-.header > .sobre{
+.header > .aboutLink{
   margin-left: auto;
   margin-right: 10px;
 }
