@@ -10,7 +10,7 @@ const ProfileUser = () => (
       <AvatarProfile src={Profile} alt={"Meu profile"} />
     </dd>
     <dt className="title">Rafael Piedade</dt>
-    <dd className="descriprion">
+    <dd className="description">
       Sou um Dev.
       Estudo Front-End/UX e faço parte na comunidade da CollabCode.
     </dd>
