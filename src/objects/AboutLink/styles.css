@@ -1,8 +1,11 @@
-.aboutLink {
-    font-weight: bold;
-    font-size: 14px;
-    color: inherit;
-    text-decoration: none;
-    text-transform: uppercase;
-  }
-  
+.about-link {
+  font-weight: bold;
+  color: var(--color-fourth);
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.about-link.-light{
+  color: var(--color-zero);
+}

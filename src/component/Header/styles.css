@@ -6,7 +6,7 @@
   color: var(--color-fourth)
 }
 
-.header > .aboutLink{
+.header > .about-link{
   margin-left: auto;
   margin-right: 10px;
 }

@@ -1,10 +1,10 @@
 import React from "react";
 import "./styles.css";
 
-const AboutLink = ({togleAbout}) => {
+const AboutLink = ({className = ""}) => {
   return (
     <>
-      <a href="!#" className="aboutLink" onClick={togleAbout}>
+      <a href="#to-do" className={`about-link ${className}`}>
         Sobre
       </a>
     </>

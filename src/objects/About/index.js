@@ -1,10 +1,11 @@
-import React from 'react'
-import './styles.css'
-const About = () => {
+import React from "react";
+import "./styles.css";
 
-    return (
-        <article className="about"></article>
-    )
-}
+const About = ({ children, className }) => {
+  return <article 
+    className="about">
+        {children}
+    </article>;
+};
 
-export default About
+export default About;
