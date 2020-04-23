@@ -3,7 +3,7 @@ import './styles.css'
 const About = () => {
 
     return (
-        <article className="about">Rafael Piedade</article>
+        <article className="about"></article>
     )
 }
 
