@@ -20,8 +20,8 @@ const ProfileUser = () => (
       Sou um Dev. Estudo Front-End/UX e faço parte na comunidade da CollabCode.
     </dd>
     <dd className="socials">
-      <IconSocial src={GitHub} alt="Logo da empresa GitHub" />
-      <IconSocial src={Linkedin} alt="Logo da empresa Linkedin" />
+      <IconSocial action="https://github.com/RafaelPiedade" src={GitHub} alt="Logo da empresa GitHub" />
+      <IconSocial action="https://linkedin.com/in/rafael-rosa-piedade-888417148/" src={Linkedin} alt="Logo da empresa Linkedin" />
       <IconSocial src={Facebook} alt="Logo da empresa Facebook" />
       <IconSocial src={Twitter} alt="Logo da empresa Twitter" />
       <IconSocial src={Instagran} alt="Logo da empresa Instagran" />
