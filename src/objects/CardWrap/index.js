@@ -2,12 +2,12 @@ import React from "react";
 
 import "./styles.css";
 
-const Card = ({children}) => {
+const CardWrap = ({children}) => {
   return (
-    <article className="card">
+    <article className="card-wrap">
       {children}
     </article>
   );
 };
 
-export default Card;
+export default CardWrap;

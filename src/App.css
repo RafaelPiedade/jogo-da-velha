@@ -7,7 +7,7 @@
   margin: 0 auto 85px;
 }
 
-.app > .card {
+.app > .card-wrap {
   box-sizing: border-box;
   display: inline-block;
   width: 90vw;

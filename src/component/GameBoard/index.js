@@ -1,10 +1,10 @@
 import React from "react";
-import Card from "../../objects/Card";
+import CardWrap from "../../objects/CardWrap";
 import Player from "../../objects/Player";
 
 import './styles.css'
 const GameBoard = () => (
-  <Card>
+  <CardWrap>
     <ul className="game-board">
         <li className="item"><Player player="o" /></li>
         <li className="item"><Player player="x" /></li>
@@ -18,7 +18,7 @@ const GameBoard = () => (
         <li className="item"><Player player="o" /></li>
         <li className="item"><Player player="x" /></li>
     </ul>
-  </Card>
+  </CardWrap>
 );
 
 export default GameBoard;
