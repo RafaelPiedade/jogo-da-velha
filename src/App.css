@@ -2,7 +2,7 @@
   text-align: center;
 }
 
-.app > .header {
+.app > .header-external {
   width: 90vw;
   margin: 0 auto 85px; 
 }

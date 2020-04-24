@@ -1,4 +1,4 @@
-.header {
+.header-external {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6,11 +6,11 @@
   color: var(--color-fourth)
 }
 
-.header > .about-link{
+.header-external > .about-link{
   margin-left: auto;
   margin-right: 10px;
 }
 
-.header > .menu{
+.header-external > .menu{
   width: 25px;
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import Header from "./component/Header";
+import HeaderExternal from "./component/HeaderExternal";
 import GameBoard from "./component/GameBoard";
 import CheckBox from "./objects/CheckBox";
 import About from "./objects/About";
@@ -17,7 +17,7 @@ const App = () => {
 
   return (
     <main className="app">
-      <Header onClick={handleClickAdd} />
+      <HeaderExternal onClick={handleClickAdd} />
       <GameBoard />
       <CheckBox id="show" value="show" content="Mostrar Eventos" />
       <About className={activeAbout}>
