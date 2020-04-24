@@ -7,7 +7,7 @@ const AboutLink = ({ className = "", onClick}) => {
   return (
     <>
       <a
-        href="#to-do"
+        href="#!"
         className={`about-link ${className}`}
         onClick={onClick}
       >

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 import Header from "./component/Header";
@@ -9,21 +9,19 @@ import About from "./objects/About";
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
 
-let activeAbout = "";
-
-const handleClick = () => {
-  console.log("clicou");
-  activeAbout = "-active";
-};
-
 const App = () => {
+  const [activeAbout, setActiveAbout] = useState("");
+
+  const handleClickAdd = () => setActiveAbout("-active");
+  const handleClickRemove = () => setActiveAbout("");
+
   return (
     <main className="app">
-      <Header onClick={handleClick} />
+      <Header onClick={handleClickAdd} />
       <Hashtag />
       <CheckBox id="show" value="show" content="Mostrar Eventos" />
       <About className={activeAbout}>
-        <HeaderInternal />
+        <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />
       </About>
     </main>
