@@ -4,17 +4,15 @@
 
 .app > .header-external {
   width: 90vw;
-  margin: 0 auto 85px; 
+  margin: 0 auto 85px;
 }
 
 .app > .card {
   box-sizing: border-box;
-  display: inline-block;/*trocar margin: auto;*/
+  display: inline-block;
   width: 90vw;
   height: 90vw;
-
   margin-bottom: 40px;
-
   max-width: 500px;
   max-height: 500px;
 }

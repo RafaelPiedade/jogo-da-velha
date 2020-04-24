@@ -4,7 +4,7 @@ import "./App.css";
 import HeaderExternal from "./component/HeaderExternal";
 import GameBoard from "./component/GameBoard";
 import CheckBox from "./objects/CheckBox";
-import About from "./objects/About";
+import AboutLayer from "./objects/AboutLayer";
 
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
@@ -20,10 +20,10 @@ const App = () => {
       <HeaderExternal onClick={handleClickAdd} />
       <GameBoard />
       <CheckBox id="show" value="show" content="Mostrar Eventos" />
-      <About className={activeAbout}>
+      <AboutLayer className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />
-      </About>
+      </AboutLayer>
     </main>
   );
 };
