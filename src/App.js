@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 import Header from "./component/Header";
-import Hashtag from "./component/Hashtag";
+import GameBoard from "./component/GameBoard";
 import CheckBox from "./objects/CheckBox";
 import About from "./objects/About";
 
@@ -18,7 +18,7 @@ const App = () => {
   return (
     <main className="app">
       <Header onClick={handleClickAdd} />
-      <Hashtag />
+      <GameBoard />
       <CheckBox id="show" value="show" content="Mostrar Eventos" />
       <About className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />

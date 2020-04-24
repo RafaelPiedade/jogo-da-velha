@@ -1,0 +1,86 @@
+.card {
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.game-board {
+  position: relative;
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.game-board > .item {
+  background-color: var(--color-zero);
+  display: flex;
+  justify-content: center;
+}
+
+.game-board > .item:nth-child(2),
+.game-board > .item:nth-child(4),
+.game-board > .item:nth-child(6),
+.game-board > .item:nth-child(8) {
+  justify-content: space-between;
+}
+
+.game-board > .item:nth-child(4),
+.game-board > .item:nth-child(6) {
+  flex-direction: column;
+}
+
+.game-board > .item:nth-child(2)::before,
+.game-board > .item:nth-child(2)::after,
+.game-board > .item:nth-child(4)::before,
+.game-board > .item:nth-child(4)::after,
+.game-board > .item:nth-child(6)::before,
+.game-board > .item:nth-child(6)::after,
+.game-board > .item:nth-child(8)::before,
+.game-board > .item:nth-child(8)::after {
+  content: "";
+  background-color: var(--color-third);
+}
+
+.game-board > .item:nth-child(2)::before,
+.game-board > .item:nth-child(2)::after,
+.game-board > .item:nth-child(8)::before,
+.game-board > .item:nth-child(8)::after {
+  width: 4px;
+  height: 100%;
+}
+
+.game-board > .item:nth-child(4)::before,
+.game-board > .item:nth-child(4)::after,
+.game-board > .item:nth-child(6)::before,
+.game-board > .item:nth-child(6)::after {
+  width: 100%;
+  height: 4px;
+}
+
+.game-board > .item:nth-child(2)::before,
+.game-board > .item:nth-child(2)::after {
+  border-top-right-radius: 2px;
+  border-top-left-radius: 2px;
+}
+
+.game-board > .item:nth-child(4)::before,
+.game-board > .item:nth-child(4)::after {
+  border-top-left-radius: 2px;
+  border-bottom-left-radius: 2px;
+}
+
+.game-board > .item:nth-child(5) {
+  border: 4px solid var(--color-third);
+}
+
+.game-board > .item:nth-child(6)::before,
+.game-board > .item:nth-child(6)::after {
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 2px;
+}
+
+.game-board > .item:nth-child(8)::before,
+.game-board > .item:nth-child(8)::after {
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+}

@@ -3,19 +3,9 @@ import Card from "../../objects/Card";
 import Player from "../../objects/Player";
 
 import './styles.css'
-const Hashtag = () => (
+const GameBoard = () => (
   <Card>
-    
-    <ul className="hashtag">
-    {/* <div className="lines -row">
-      <div className="row"></div>
-      <div className="row"></div>
-    </div>
-    <div className="lines -column">
-      <div className="row"></div>
-      <div className="row"></div>
-    </div> */}
-
+    <ul className="game-board">
         <li className="item"><Player player="o" /></li>
         <li className="item"><Player player="x" /></li>
         <li className="item"><Player player="x" /></li>
@@ -31,4 +21,4 @@ const Hashtag = () => (
   </Card>
 );
 
-export default Hashtag;
+export default GameBoard;
