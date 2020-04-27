@@ -8,7 +8,8 @@ import LayerDark from "./objects/LayerDark";
 
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
-import GameMoves from './component/GameMoves'
+import GameMoves from "./component/GameMoves";
+import TagGame from "./objects/TagGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
@@ -17,10 +18,11 @@ const App = () => {
   const handleClickRemove = () => setActiveAbout("");
 
   return (
-    <main className="app">
+    <main id="main" className="app">
       <HeaderGame onClick={handleClickAdd} />
       <GameBoard />
       <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
+      <TagGame content="Adicionou X" />
       <GameMoves />
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
