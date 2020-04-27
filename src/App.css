@@ -16,3 +16,12 @@
   max-width: 500px;
   max-height: 500px;
 }
+
+.app > .game-moves {
+  margin-top: 40px;
+  display: none
+}
+
+.app > input:checked ~ .game-moves {
+  display: flex;
+}

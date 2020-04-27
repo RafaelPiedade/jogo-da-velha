@@ -8,6 +8,7 @@ import AboutLayer from "./objects/AboutLayer";
 
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
+import GameMoves from './component/GameMoves'
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
@@ -20,6 +21,7 @@ const App = () => {
       <HeaderExternal onClick={handleClickAdd} />
       <GameBoard />
       <CheckBox id="show" value="show" content="Mostrar Eventos" />
+      <GameMoves />
       <AboutLayer className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />
