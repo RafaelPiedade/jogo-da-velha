@@ -3,18 +3,18 @@ import "./styles.css";
 
 import AboutLink from "../../objects/AboutLink";
 import LogoCollab from "../../objects/LogoCollab";
-import Menu from "../../objects/Menu";
+import MenuGame from "../../objects/MenuGame";
 
-const HeaderExternal = ({ onClick }) => {
+const HeaderGame = ({ onClick }) => {
   return (
     <>
-      <header className="header-external">
+      <header className="header-game">
         <LogoCollab />
         <AboutLink onClick={onClick} />
-        <Menu onClick={onClick} />
+        <MenuGame onClick={onClick} />
       </header>
     </>
   );
 };
 
-export default HeaderExternal;
+export default HeaderGame;

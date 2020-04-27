@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
 
-import HeaderExternal from "./component/HeaderExternal";
+import HeaderGame from "./component/HeaderGame";
 import GameBoard from "./component/GameBoard";
-import CheckBox from "./objects/CheckBox";
-import AboutLayer from "./objects/AboutLayer";
+import InputCheckBox from "./objects/InputCheckBox";
+import LayerDark from "./objects/LayerDark";
 
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
@@ -18,14 +18,14 @@ const App = () => {
 
   return (
     <main className="app">
-      <HeaderExternal onClick={handleClickAdd} />
+      <HeaderGame onClick={handleClickAdd} />
       <GameBoard />
-      <CheckBox id="show" value="show" content="Mostrar Eventos" />
+      <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
       <GameMoves />
-      <AboutLayer className={activeAbout}>
+      <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />
-      </AboutLayer>
+      </LayerDark>
     </main>
   );
 };

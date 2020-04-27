@@ -1,0 +1,6 @@
+{
+    "remote.WSL.fileWatcher.polling": true,
+    "launch": {
+    
+    }
+}
