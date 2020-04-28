@@ -6,17 +6,17 @@ import './styles.css'
 const GameBoard = () => (
   <CardWrap>
     <ul className="game-board">
-        <li className="item"><PlayerGame player="o" /></li>
-        <li className="item"><PlayerGame player="x" /></li>
-        <li className="item"><PlayerGame player="x" /></li>
+        <li className="item"><PlayerGame /></li>
+        <li className="item"><PlayerGame/></li>
+        <li className="item"><PlayerGame/></li>
 
-        <li className="item"><PlayerGame player="o" /></li>
-        <li className="item"><PlayerGame player="x" /></li>
-        <li className="item"><PlayerGame player="o" /></li>
+        <li className="item"><PlayerGame/></li>
+        <li className="item"><PlayerGame/></li>
+        <li className="item"><PlayerGame/></li>
 
-        <li className="item"><PlayerGame player="x" /></li>
-        <li className="item"><PlayerGame player="o" /></li>
-        <li className="item"><PlayerGame player="x" /></li>
+        <li className="item"><PlayerGame/></li>
+        <li className="item"><PlayerGame/></li>
+        <li className="item"><PlayerGame/></li>
     </ul>
   </CardWrap>
 );
