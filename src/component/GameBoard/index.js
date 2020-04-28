@@ -6,7 +6,7 @@ import './styles.css'
 const GameBoard = () => (
   <CardWrap>
     <ul className="game-board">
-        <li className="item"><PlayerGame /></li>
+        <li className="item"><PlayerGame/></li>
         <li className="item"><PlayerGame/></li>
         <li className="item"><PlayerGame/></li>
 

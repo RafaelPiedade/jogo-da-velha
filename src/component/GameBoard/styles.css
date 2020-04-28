@@ -84,3 +84,7 @@
   border-bottom-left-radius: 2px;
   border-bottom-right-radius: 2px;
 }
+
+.game-board .player-game{
+  flex-basis: 100%;
+}
