@@ -1,5 +1,11 @@
 .tag-game {
+  font-size: 14px;
   background-color: var(--color-zero);
   padding: var(--spacing-very-small) var(--spacing-medium);
   border-radius: 2em;
+}
+
+.tag-game.-end {
+  text-transform: uppercase;
+  background-color: var(--color-ninth);
 }

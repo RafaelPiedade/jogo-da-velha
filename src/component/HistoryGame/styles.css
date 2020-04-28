@@ -1,6 +1,8 @@
-.history-game .tag-game{
-  display: inline-block;
-}
 .history-game > .action {
-  margin-bottom: 20px;
+  margin-bottom: var(--spacing-medium);
+}
+.history-game .tag-game {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 130px;
 }

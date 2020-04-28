@@ -9,7 +9,6 @@ import LayerDark from "./objects/LayerDark";
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
 import HistoryGame from "./component/HistoryGame";
-import TagGame from "./objects/TagGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
