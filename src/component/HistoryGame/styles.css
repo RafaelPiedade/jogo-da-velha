@@ -1,0 +1,6 @@
+.history-game .tag-game{
+  display: inline-block;
+}
+.history-game > .action {
+  margin-bottom: 20px;
+}

@@ -20,11 +20,6 @@
   max-height: 500px;
 }
 
-.app > .game-moves {
-  margin-top: 40px;
-  display: none
-}
-
-.app > input:checked ~ .game-moves {
-  display: flex;
+.app > .label-game {
+  margin-bottom: var(--spacing-big);
 }
