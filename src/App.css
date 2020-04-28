@@ -29,6 +29,6 @@
   display: none;
 }
 
-.app > .history-game.-active{
+.app > input:checked ~ .history-game{
   display: block;
 }
