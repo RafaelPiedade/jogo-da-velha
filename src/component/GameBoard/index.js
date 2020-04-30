@@ -1,24 +1,46 @@
-import React from "react";
+import React, { useState } from "react";
 import CardWrap from "../../objects/CardGame";
 import PlayerGame from "../../objects/PlayerGame";
+import "./styles.css";
 
-import './styles.css'
-const GameBoard = () => (
-  <CardWrap>
-    <ul className="game-board">
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
+const GameBoard = () => {
+  const [nextPlayer, setNextPlayer] = useState("x");
+  const [players, setPlayers] = useState([
+    { id: 1, content: "" },
+    { id: 2, content: "" },
+    { id: 3, content: "" },
+    { id: 4, content: "" },
+    { id: 5, content: "" },
+    { id: 6, content: "" },
+    { id: 7, content: "" },
+    { id: 8, content: "" },
+    { id: 9, content: "" },
+  ]);
 
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
+  const handleClick = (id) => {
+    setPlayers((old) =>
+      old.map((player) =>
+        player.id === id ? { id, content: nextPlayer } : player
+      )
+    );
+    setNextPlayer((old) => (old === "x" ? "o" : "x"));
+  };
 
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
-        <li className="item"><PlayerGame/></li>
-    </ul>
-  </CardWrap>
-);
+  return (
+    <CardWrap>
+      <ul className="game-board">
+        {players.map((player) => (
+          <li
+            className="item"
+            key={player.id}
+            onClick={() => player.content==="" && handleClick(player.id)}
+          >
+            <PlayerGame id={player.id} content={player.content} />
+          </li>
+        ))}
+      </ul>
+    </CardWrap>
+  );
+};
 
 export default GameBoard;

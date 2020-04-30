@@ -12,7 +12,6 @@ import HistoryGame from "./component/HistoryGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
-
   const handleClickAdd = () => setActiveAbout("-active");
   const handleClickRemove = () => setActiveAbout("");
 
