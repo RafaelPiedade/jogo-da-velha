@@ -12,6 +12,7 @@ import HistoryGame from "./component/HistoryGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
+  const history = ["Adicionou X", "Adicionou O", "Adicionou X"];
   const handleClickAdd = () => setActiveAbout("-active");
   const handleClickRemove = () => setActiveAbout("");
 
@@ -20,7 +21,7 @@ const App = () => {
       <HeaderGame onClick={handleClickAdd} />
       <GameBoard />
       <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
-      <HistoryGame />
+      <HistoryGame history={history} />
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />

@@ -33,7 +33,7 @@ const GameBoard = () => {
           <li
             className="item"
             key={player.id}
-            onClick={() => player.content==="" && handleClick(player.id)}
+            onClick={() => player.content === "" && handleClick(player.id)}
           >
             <PlayerGame id={player.id} content={player.content} />
           </li>
