@@ -3,7 +3,7 @@ import CardWrap from "../../objects/CardGame";
 import PlayerGame from "../../objects/PlayerGame";
 import "./styles.css";
 
-const GameBoard = () => {
+const GameBoard = ({callback}) => {
   const [nextPlayer, setNextPlayer] = useState("x");
   const [players, setPlayers] = useState([
     { id: 1, content: "" },
@@ -23,6 +23,7 @@ const GameBoard = () => {
         player.id === id ? { id, content: nextPlayer } : player
       )
     );
+    callback(nextPlayer)
     setNextPlayer((old) => (old === "x" ? "o" : "x"));
   };
 

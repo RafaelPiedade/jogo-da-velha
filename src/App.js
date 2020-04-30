@@ -12,14 +12,17 @@ import HistoryGame from "./component/HistoryGame";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
-  const history = ["Adicionou X", "Adicionou O", "Adicionou X"];
+  const [history, setHistory] = useState([]);
   const handleClickAdd = () => setActiveAbout("-active");
   const handleClickRemove = () => setActiveAbout("");
 
+  const addHistory = (player) => {
+    setHistory((old) => [...old, `Adicionou ${player.toUpperCase()}`]);
+  };
   return (
     <main id="main" className="app">
       <HeaderGame onClick={handleClickAdd} />
-      <GameBoard />
+      <GameBoard callback={addHistory} />
       <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
       <HistoryGame history={history} />
       <LayerDark className={activeAbout}>
