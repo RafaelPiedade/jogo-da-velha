@@ -24,11 +24,19 @@
   margin-bottom: var(--spacing-big);
 }
 
-
-.app > .history-game{
+.app > .history-game {
   display: none;
 }
 
-.app > input:checked ~ .history-game{
+.app > input:checked ~ .history-game {
   display: block;
+}
+
+@media (min-width: 740px){
+  .app > .header-game{
+    box-sizing: border-box;
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
 }
