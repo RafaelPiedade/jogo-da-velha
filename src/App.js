@@ -9,6 +9,7 @@ import LayerDark from "./objects/LayerDark";
 import HeaderInternal from "./component/HeaderInternal";
 import ProfileUser from "./component/ProfileUser";
 import HistoryGame from "./component/HistoryGame";
+import WrapperBoardHistory from "./objects/WrapperBoardHistory";
 
 const App = () => {
   const [activeAbout, setActiveAbout] = useState("");
@@ -22,9 +23,11 @@ const App = () => {
   return (
     <main id="main" className="app">
       <HeaderGame onClick={handleClickAdd} />
-      <GameBoard callback={addHistory} />
-      <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
-      <HistoryGame history={history} />
+      <WrapperBoardHistory>
+        <GameBoard callback={addHistory} />
+        <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
+        <HistoryGame history={history} />
+      </WrapperBoardHistory>
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
         <ProfileUser />

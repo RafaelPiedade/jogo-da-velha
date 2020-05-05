@@ -8,35 +8,56 @@
 .app > .header-game {
   width: 90vw;
   margin: 0 auto 85px;
+  min-width: 260px;
 }
 
-.app > .card-game {
+.app .card-game {
   box-sizing: border-box;
   display: inline-block;
   width: 90vw;
   height: 90vw;
   margin-bottom: 40px;
-  max-width: 500px;
-  max-height: 500px;
+  max-width: 330px;
+  max-height: 330px;
+  min-width: 260px;
+  min-height: 260px;
 }
 
-.app > .label-game {
+.app .label-game {
+  display: flex;
+  justify-content: center;
   margin-bottom: var(--spacing-big);
 }
 
-.app > .history-game {
+.app .history-game {
   display: none;
 }
 
-.app > input:checked ~ .history-game {
+.app input:checked ~ .history-game {
   display: block;
 }
 
-@media (min-width: 740px){
-  .app > .header-game{
+@media (min-width: 740px) {
+  .app > .header-game {
     box-sizing: border-box;
     width: 100%;
     padding-left: 10%;
     padding-right: 10%;
+  }
+
+  .app > .wrapper-boardHistory {
+    display: inline-flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  .app .card-game {
+    margin-right: 40px;
+  }
+
+  .app .label-game {
+    position: absolute;
+    top: 370px;
+    left: 96px;
   }
 }
