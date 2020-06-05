@@ -1,7 +1,7 @@
 import React from "react";
 
-const WrapperBoardHistory = ({ children }) => (
-  <div className="wrapper-boardHistory">{children}</div>
+const WrapperBoardHistory = ({ children, active = false }) => (
+  <div className={`wrapper-boardHistory ${active && '-active'}`}>{children}</div>
 );
 
 export default WrapperBoardHistory;

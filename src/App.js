@@ -12,21 +12,32 @@ import HistoryGame from "./component/HistoryGame";
 import WrapperBoardHistory from "./objects/WrapperBoardHistory";
 
 const App = () => {
+  const [active, setActive] = useState(false);
   const [activeAbout, setActiveAbout] = useState("");
-  const [history, setHistory] = useState([]);
   const handleClickAdd = () => setActiveAbout("-active");
   const handleClickRemove = () => setActiveAbout("");
 
+  const [history, setHistory] = useState([]);
   const addHistory = (player) => {
-    setHistory((old) => [...old, `Adicionou ${player.toUpperCase()}`]);
+    setHistory((old) => [...old, player]);
   };
+  const returnHistory = (player) => {
+    setHistory();
+  };
+
+  const showHideHistory = () => setActive((old) => !!!old);
   return (
     <main id="main" className="app">
       <HeaderGame onClick={handleClickAdd} />
-      <WrapperBoardHistory>
+      <WrapperBoardHistory active={active}>
         <GameBoard callback={addHistory} />
-        <InputCheckBox id="show" value="show" content="Mostrar Eventos" />
-        <HistoryGame history={history} />
+        <InputCheckBox
+          onClick={showHideHistory}
+          id="show"
+          value="show"
+          content="Mostrar Eventos"
+        />
+        <HistoryGame history={history} callback={returnHistory} />
       </WrapperBoardHistory>
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />

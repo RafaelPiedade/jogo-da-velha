@@ -23,7 +23,7 @@ const GameBoard = ({callback}) => {
         player.id === id ? { id, content: nextPlayer } : player
       )
     );
-    callback(nextPlayer)
+    callback({id, content:nextPlayer})
     setNextPlayer((old) => (old === "x" ? "o" : "x"));
   };
 

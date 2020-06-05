@@ -3,12 +3,12 @@ import TagGame from "../../objects/TagGame";
 
 import "./styles.css";
 
-const HistoryGame = ({ history }) => {
+const HistoryGame = ({ history, callback }) => {
   return (
     <ol className={`history-game`}>
-      {history.map((content,key) => (
-        <li key={key} className="action">
-          <TagGame content={content} />
+      {history.map((player, key) => (
+        <li key={key} className="action" onClick={() => callback(player)}>
+          <TagGame content={`Adicionou ${player.content.toUpperCase()}`} />
         </li>
       ))}
     </ol>

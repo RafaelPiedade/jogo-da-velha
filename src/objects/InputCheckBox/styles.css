@@ -1,10 +1,11 @@
-.input-game{
+.input-game {
   display: none;
 }
 
-.label-game{
+.label-game {
   display: inline-flex;
   align-items: center;
+  cursor: pointer;
 }
 .label-game::before {
   content: "";
