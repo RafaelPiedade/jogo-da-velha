@@ -17,12 +17,13 @@ const App = () => {
   const handleClickAdd = () => setActiveAbout("-active");
   const handleClickRemove = () => setActiveAbout("");
 
-  const [history, setHistory] = useState([]);
+  const [history, setHistory] = useState(["Start"]);
   const addHistory = (player) => {
-    setHistory((old) => [...old, player]);
+    setHistory((old) => [...old, `Adicionou ${player.content.toUpperCase()}`]);
   };
-  const returnHistory = (player) => {
-    setHistory();
+  const changeHistory = (key) => {
+    setHistory((old) => old.slice(0, key + 1));
+    console.log(key);
   };
 
   const showHideHistory = () => setActive((old) => !!!old);
@@ -37,7 +38,7 @@ const App = () => {
           value="show"
           content="Mostrar Eventos"
         />
-        <HistoryGame history={history} callback={returnHistory} />
+        <HistoryGame history={history} onClick={changeHistory} />
       </WrapperBoardHistory>
       <LayerDark className={activeAbout}>
         <HeaderInternal onClick={handleClickRemove} />
