@@ -5,10 +5,10 @@ import "./styles.css";
 
 const GameBoard = ({ callback }) => {
   const [nextPlayer, setNextPlayer] = useState("x");
-  const [round, setRound] = useState(0)
+  const [lastRound, setLastRound] = useState(0);
   const [history, setHistory] = useState([
     {
-      round:0,
+      round: 0,
       state: [
         { id: 1, content: "" },
         { id: 2, content: "" },
@@ -21,39 +21,19 @@ const GameBoard = ({ callback }) => {
         { id: 9, content: "" },
       ],
     },
-    {
-      round:1,
-      state: [
-        { id: 1, content: "" },
-        { id: 2, content: "" },
-        { id: 3, content: "" },
-        { id: 4, content: "" },
-        { id: 5, content: "x" },
-        { id: 6, content: "" },
-        { id: 7, content: "" },
-        { id: 8, content: "" },
-        { id: 9, content: "" },
-      ],
-    },
-  ]);
-  const [players, setPlayers] = useState([
-    { id: 1, content: "" },
-    { id: 2, content: "" },
-    { id: 3, content: "" },
-    { id: 4, content: "" },
-    { id: 5, content: "" },
-    { id: 6, content: "" },
-    { id: 7, content: "" },
-    { id: 8, content: "" },
-    { id: 9, content: "" },
   ]);
 
   const handleClick = (id) => {
-    setPlayers((old) =>
-      old.map((player) =>
-        player.id === id ? { id, content: nextPlayer } : player
-      )
-    );
+    setHistory((old) => [
+      ...old,
+      {
+        round: lastRound + 1,
+        state: old[lastRound].state.map((player) =>
+          player.id === id ? { id, content: nextPlayer } : player
+        ),
+      },
+    ]);
+    setLastRound((old) => old + 1);
     callback({ id, content: nextPlayer });
     setNextPlayer((old) => (old === "x" ? "o" : "x"));
   };
@@ -61,7 +41,7 @@ const GameBoard = ({ callback }) => {
   return (
     <CardWrap>
       <ul className="game-board">
-        {players.map((player) => (
+        {history[lastRound].state.map((player) => (
           <li
             className="item"
             key={player.id}
